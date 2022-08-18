@@ -1,0 +1,177 @@
+.modal-template {
+    display: none;
+
+    right: 0;
+
+    @media screen and (max-width: $screen-lg) {
+        transform: translateX(100%);
+    }
+
+    @media screen and (min-width: $screen-lg) {
+        transform: translateX(117%);
+    }
+
+    @media screen and (min-width: $screen-md) {
+        width: 440px;
+    }
+
+    &.modal-core--open &__container {
+        @media screen and (min-width: $screen-md) {
+            box-shadow: -2px 0px 4px rgba($modal-shadow-secondary, 0.02), 16px 0px 52px rgba($modal-shadow, 0.2);
+        }
+    }
+
+    &__container {
+        display: flex;
+
+        height: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+
+            width: 1px;
+            height: 100%;
+
+            background: $line-main-bg;
+            border-radius: 1px;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        @media screen and (max-width: $screen-lg) {
+            padding-top: 24px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            padding-top: 32px;
+        }
+    }
+
+    &__close {
+        background-color: $color-secondary;
+
+        @media screen and (max-width: $screen-lg) {
+            margin-left: 16px;
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            position: absolute;
+            left: -72px;
+        }
+    }
+
+    &__header {
+        margin-left: -1px;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        @media screen and (max-width: $screen-lg) {
+            margin-left: 12px;
+        }
+    
+        @media screen and (min-width: $screen-lg) {
+            margin-left: 30px;
+        }
+    }
+
+    &__form {
+        box-sizing: border-box;
+
+        @media screen and (max-width: $screen-lg) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
+    &__data {
+        box-sizing: border-box;
+
+        cursor: pointer;
+
+        width: 100%;
+
+        background: $modal-bg;
+        border: 1px solid $modal-input-border;
+        border-radius: 8px;
+
+        padding: 12px 16px;
+
+        transition: .3s;
+
+        outline: none;
+
+        margin-bottom: 16px;
+
+        &:focus {
+            transition: .3s;
+
+            border: 1px solid $modal-color;
+        }
+
+        &:hover {
+            transition: .3s;
+            border-color: $modal-color;
+        }
+
+        &::placeholder {
+            font-size: $font-size--s / 0.875;
+            line-height: $line-height--m;
+            font-weight: $font-weight-s;
+        
+            letter-spacing: $letter-spacing-s;
+        
+            color: $modal-color--lighten;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+
+        min-height: 118px;
+    }
+
+    &__info {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875;
+
+        color: $modal-color--light;
+
+        text-align: left;
+
+        @media screen and (max-width: $screen-lg) {
+            margin-bottom: 19px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            margin-bottom: 23px;
+        } 
+    }
+
+    &__link {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875;
+
+        color: $modal-color-secondary;
+        
+        transition: .3s;
+
+        &:hover {
+            transition: .3s;
+            color: $modal-color;
+        }
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,17 @@
+.body-site {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $body-bg;
+
+    font-family: $font-family;
+
+    &::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+    }
+
+    &--no-scroll {
+        overflow: hidden;
+    }
+}

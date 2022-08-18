@@ -1,0 +1,275 @@
+.services {
+    &__header {
+        padding-right: 22px;
+
+        @media screen and (max-width: $screen-xl) {
+            padding-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media screen and (min-width: $screen-xl) {
+            padding-top: 42px;
+            margin-bottom: 2px;
+        }
+    }
+
+    &__title {
+        @media screen and (max-width: $screen-md) {
+            margin-left: 12px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            margin-left: 20px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            margin-left: 30px;
+        }
+    }
+
+    &__row {
+        margin-left: auto;
+
+        @media screen and (max-width: $screen-xl) {
+            display: none;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            display: flex;
+        }
+    }
+
+    &__row > &__button:not(&__button:last-child) {
+        margin-right: 32px;
+    }
+
+    &__button {
+        border: none;
+    
+        background-color: $service-btn-bg;
+    
+        cursor: pointer;
+    }
+
+    &__button-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__button-text {
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+        font-weight: $font-weight-m;
+
+        letter-spacing: $letter-spacing-s;
+
+        color: $service-btn-color;
+
+        transition: .3s;
+
+        &:hover {
+            transition: .3s;
+            color: $service-item-color;
+        }
+    }
+
+    &__button-img {
+        background-color: $service-btn-icon-bg;
+
+        margin-left: 8px;
+    }
+
+    &__nav {
+        display: flex;
+
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 24px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 32px;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            margin-bottom: 0px;
+        }
+
+        &::after {
+            position: absolute;
+            right: 0;
+
+            content: "";
+
+            width: 24px;
+            height: 40px;
+
+            background: linear-gradient(270deg, $service-bg 16.84%, rgba($service-bg, 0.0001) 100%);
+        }
+    }
+
+    &__list-name {
+        display: flex;
+    
+        @media screen and (max-width: $screen-xl) {
+            overflow-x: scroll;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            flex-wrap: wrap;
+            overflow-x: visible;
+    
+            min-height: 94px;
+        }
+
+        @media screen and (max-width: $screen-md) {
+            padding-left: 16px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            padding-left: 24px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            padding-left: 34px;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+            scrollbar-width: none;
+        }
+    }
+
+    &__list-name > &__item:not(&__item:last-child) {
+        margin-right: 3px;
+    }
+
+    &__item {
+        border: 2px solid $service-bg;
+        max-height: 36px;
+        transition: .3s;
+
+        @media screen and (min-width: $screen-xl) {
+            margin-top: 7px;
+        }
+
+        &:hover > a {
+            transition: .3s;
+            color: $service-title-color;
+        }
+
+        &--active {
+            background: $service-item-bg;
+            border: 2px solid $service-item-border;
+            border-radius: 6px;
+        }
+    }
+
+    &__item-name {
+        display: inline-block;
+    
+        white-space: nowrap;
+    
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+    
+        letter-spacing: $letter-spacing-s;
+    
+        color: $service-item-color;
+
+        padding: 6px 16.5px;
+    }
+
+    &__item-info {
+        display: flex;
+    
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        @media screen and (max-width: $screen-md) {
+            flex-wrap: wrap;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            flex-wrap: nowrap;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            padding-left: 34px;
+            padding-right: 29px;
+        }
+    }
+
+    &__item-description {
+        @media screen and (min-width: $screen-md) {
+            width: 43.333%;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            width: 46.357%;
+        }
+
+        @media screen and (max-width: $screen-md) {
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-bottom: 16px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            padding: 0;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            padding-top: 10px;
+        }
+    }
+
+    &__item-content {
+        overflow: hidden;
+    
+        @media screen and (max-width: $screen-md) {
+            max-height: 90px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            max-height: 160px;
+        }
+    }
+
+    &__item-text > &__item-p:not(&__item-p:first-child) {
+        margin-top: 20px;
+    }
+
+    &__item-p {
+        font-size: $font-size--s;
+    
+        letter-spacing: $letter-spacing-m;
+    
+        color: $service-item-p-color;
+    
+        @media screen and (max-width: $screen-md) {
+            line-height: $font-size--m * 1.125;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            line-height: $font-size--m * 1.25;
+        }
+    }
+
+    &__img {
+        display: block;
+    
+        @media screen and (max-width: $screen-md) {
+            width: 100%;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            width: 50%;
+            border-radius: 6px;
+        }
+    }
+}

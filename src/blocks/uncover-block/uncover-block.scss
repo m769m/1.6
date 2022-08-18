@@ -1,0 +1,20 @@
+.uncover-parent {
+    .uncover-block {
+        &[data-uncover-block="1"] {
+            max-height: var(--height-1);
+        }
+
+        &[data-uncover-block="2"] {
+            max-height: var(--height-2);
+        }
+
+        &[data-uncover-block="3"] {
+            max-height: var(--height-3);
+        }
+    }
+}
+
+.uncover-block {
+    transition-timing-function: linear;
+    transition-duration: 0.25s;
+}

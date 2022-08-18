@@ -1,0 +1,101 @@
+.uncover-button {
+    border: none;
+
+    background-color: $uncover-btn-bg;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-size: $font-size--m;
+    font-weight: $font-weight-m;
+    line-height: $line-height--m;
+
+    letter-spacing: $letter-spacing-s;
+
+    color: $uncover-btn-color;
+
+    &::before {
+        content: "";
+
+        width: 24px;
+        height: 24px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url($path-uncover);
+
+        border: none;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        margin-right: 8px;
+    }
+
+
+    &:hover {
+        transition: 0.3s;
+        color: $text-color--light;
+    }
+
+    &--icon-rotate::before {
+        transform: rotate(180deg);
+    }
+
+    &--open[data-uncover-button="1"] {
+        @media screen and (max-width: $screen-md) {
+            margin-top: 16px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            margin-top: 10px;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            margin-top: 14px;
+        }
+    }
+
+    &--close[data-uncover-button="1"] {
+        @media screen and (max-width: $screen-md) {
+            margin-top: 32px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            margin-top: 20px;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            margin-top: 28px;
+        }
+    }
+
+    &--open[data-uncover-button="2"] {
+        @media screen and (min-width: $screen-md) {
+            margin-top: 24px;
+        }
+    }
+
+    &--close[data-uncover-button="2"] {
+        @media screen and (min-width: $screen-md) {
+            margin-top: 46px;
+        }
+    }
+
+    &--open[data-uncover-button="3"] {
+        @media screen and (min-width: $screen-md) {
+            margin-top: 24px;
+        }
+    }
+
+    &--close[data-uncover-button="3"] {
+        @media screen and (min-width: $screen-md) {
+            margin-top: 46px;
+        }
+    }
+}

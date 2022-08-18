@@ -1,0 +1,244 @@
+.menu {
+    transform: translateX(-100%);
+
+    @media screen and (min-width: $screen-xl) {
+        display: block;
+        z-index: 2;
+    }
+    
+    @media screen and (min-width: $screen-md) {
+        width: 320px;
+    }
+    
+    @media screen and (min-width: $screen-xl) {
+        transition: none;
+        box-shadow: none;
+        transform: translateX(0px);
+    }
+
+    &.modal-core--open {
+        @media screen and (min-width: $screen-md) {
+            box-shadow: -16px 0px 52px rgba($modal-color, 0.2);
+        }
+    }
+
+    &__body {
+        box-sizing: border-box;
+
+        background-color: $modal-bg;
+
+        height: 100%;
+    
+        overflow-y: auto;
+    
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $screen-md) {
+            padding-top: 92px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            padding-top: 115px;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+            scrollbar-width: none;
+        }
+    }
+
+    &__nav {
+        margin-bottom: 32px;
+    }
+
+    &__header {
+        position: fixed;
+        box-sizing: border-box;
+    }
+
+    &__close {
+        @media screen and (min-width: $screen-xl) {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+    
+        background-color: $modal-bg;
+
+        &:hover {
+            &::before {
+                height: 32px;
+            
+                transition: all 0.1s ease-in-out;
+            }
+
+            & .menu__item-title {
+                color: $modal-color--light;
+            
+                transition: all 0.1s ease-in-out;
+            }
+        }
+
+        &:not(&:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &::before {
+            content: "";
+
+            height: 0px;
+            width: 4px;
+
+            background: $line-secondary-bg;
+
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            transition: all 0.1s ease-in-out;
+
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        &--active {
+            &::before {
+                height: 32px;
+            }
+
+            & .menu__item-title {
+                color: $modal-color--light;
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+        font-weight: $font-weight-s;
+
+        letter-spacing: $letter-spacing-s;
+
+        color: $modal-color;
+
+        transition: all 0.1s ease-in-out;
+
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        @media screen and (max-width: $screen-sm) {
+            padding-left: 16px;
+        }
+
+        @media screen and (min-width: $screen-sm) {
+            padding-left: 20px;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+
+        padding-bottom: 32px;
+
+        @media screen and (min-width: $screen-sm) {
+            padding-left: 24px;
+        }
+        
+        @media screen and (max-width: $screen-sm) {
+            padding-left: 16px;
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__row-button {
+        margin-bottom: 16px;
+    }
+
+    &__button {
+        background-color: $modal-color-secondary;
+
+        &:not(&:last-child):not(&:only-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__leng:not(&__button:last-child):not(&__button:only-child) {
+        margin-right: 7px;
+    }
+
+    &__button-leng {
+        background-color: $modal-bg;
+
+        font-size: $font-size--m;
+        font-weight: $font-weight-s;
+        line-height: $line-height--m;
+
+        letter-spacing: $letter-spacing-s;
+
+        color: $modal-color;
+
+        transition: all 0.1s ease-in-out;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $modal-color--light;
+    
+            transition: all 0.1s ease-in-out;
+        }
+
+        &--active {
+            color: $modal-color--light;
+        }
+    }
+    
+    &__link {
+        display: block;
+        cursor: pointer;
+
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            color: $modal-color--light;
+    
+            transition: all 0.1s ease-in-out;
+        }
+    }
+
+    &__mail {
+        font-size: $font-size--m;
+        font-weight: $font-weight-s;
+        line-height: $line-height--m;
+    
+        letter-spacing: $letter-spacing-s;
+    
+        color: $modal-color;
+
+        margin-bottom: 12px;
+    }
+
+    &__phone {
+        font-size: $font-size--l;
+        font-weight: $font-weight-l;
+        line-height: $line-height--l;
+    
+        letter-spacing: $letter-spacing-xs;
+    
+        color: $modal-color;
+
+        margin-bottom: 8px;
+
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 8px;
+        }
+        
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 40px;
+        }
+    }
+}

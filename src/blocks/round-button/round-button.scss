@@ -1,0 +1,54 @@
+.round-button {
+    width: 40px;
+    height: 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    border-radius: 50%;
+    border: none;
+
+    box-shadow: inset 0 0 0 2px $color-secondary;
+
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: inset 0 0 0 2px #80949F;
+    }
+
+    &--close {
+        background-image: url($path-close);
+    }
+
+    &--search {
+        background-image: url($path-search);
+    }
+
+    &--burger {
+        background-image: url($path-burger);
+    }
+
+    &--call {
+        background-image: url($path-call);
+    }
+
+    &--chat {
+        background-image: url($path-chat);
+    }
+
+    &--profile {
+        background-image: url($path-profile);
+    }
+
+    &--repair {
+        background-image: url($path-repair);
+    }
+
+    &--checkstatus {
+        background-image: url($path-checkstatus);
+    }
+
+    &--pointer {
+        background-image: url($path-pointer);
+    }
+}

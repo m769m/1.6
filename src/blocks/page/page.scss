@@ -1,0 +1,59 @@
+.page {
+    z-index: 1;
+    background-color: $main-bg;
+
+    position: relative;
+
+    @media screen and (max-width: $screen-xl) {
+        top: 88px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+        left: 320px;
+        top: initial;
+
+        margin-right: 320px;
+    }
+
+    &__services {
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 24px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 36px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            margin-bottom: 51px;
+        }
+    }
+
+    &__brends {
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 24px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 28px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__engineering {
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 24px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            margin-bottom: 50px;
+        }
+    }
+}

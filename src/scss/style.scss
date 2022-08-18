@@ -1,0 +1,35 @@
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+@import '~normalize.css';
+
+@import 'reset.scss';
+@import 'variables.scss';
+
+@import '@scss/fonts.scss';
+
+@import '@blocks/body-site/body-site.scss';
+@import '@blocks/page/page.scss';
+
+@import '@blocks/round-button/round-button.scss';
+@import '@blocks/uncover-button/uncover-button.scss';
+@import '@blocks/submit-button/submit-button.scss';
+
+@import '@blocks/header/header.scss';
+@import '@blocks/title/title.scss';
+
+@import '@blocks/services/services.scss';
+
+@import '@blocks/repair/repair.scss';
+@import '@blocks/brends/brends.scss';
+@import '@blocks/engineering/engineering.scss';
+@import '@blocks/price/price.scss';
+
+@import '@blocks/footer/footer.scss';
+
+@import '@blocks/modal-core/modal-core.scss';
+@import '@blocks/modal-template/modal-template.scss';
+
+@import '@blocks/menu/menu.scss';
+@import '@blocks/chat/chat.scss';
+@import '@blocks/call/call.scss';
+
+@import '@blocks/uncover-block/uncover-block.scss';

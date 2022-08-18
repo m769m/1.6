@@ -1,0 +1,242 @@
+.repair { 
+    @media screen and (max-width: $screen-md) {
+        padding-bottom: 12px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        padding-bottom: 0;
+    }
+
+    &__header {
+        background: linear-gradient(270deg, $repair-header-bg 0%, $repair-bg 98.61%);
+    
+        @media screen and (max-width: $screen-md) {
+            margin-bottom: 16px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 24px;
+        }
+        
+        &::before {
+            content: "";
+
+            display: block;
+            background: $line-main-bg;
+            height: 1px;
+        }
+    }
+
+    &__title {
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+        font-weight: $font-weight-xs;
+    
+        letter-spacing: $letter-spacing-s;
+        text-transform: uppercase;
+    
+        color: $repair-title-color;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+    
+        @media screen and (max-width: $screen-md) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    
+        @media screen and (min-width: $screen-xl) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
+    &__body {
+        @media screen and (min-width: $screen-md) {
+            max-width: 720px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            max-width: 1056px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width: $screen-md) {
+            padding: 0px 0px 16px 16px;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+
+        .swiper-pagination {
+            @media screen and (max-width: $screen-md) {
+                bottom: initial;
+
+                margin-top: 16px;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            opacity: 1;
+
+            @media screen and (max-width: $screen-md) {
+                width: 12px;
+                height: 12px;
+
+                line-height: $line-height--s;
+                font-size: $font-size--xs;
+
+                background: $pagination-bg;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            @media screen and (max-width: $screen-md) {
+                background: $pagination-bg--dark;
+            }
+        }
+
+        .swiper-container {
+            @media screen and (max-width: $screen-md) {
+                display: flex;
+            }
+
+            @media screen and (min-width: $screen-md) {
+                display: none;
+            }
+        }
+
+        .swiper-pagination {
+            @media screen and (min-width: $screen-md) {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        @media screen and (max-width: $screen-md) {
+            display: none;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            display: block;
+    
+            max-height: 160px;
+            overflow: hidden;
+        }
+
+        &::after {
+            @media screen and (max-width: $screen-md) {
+                content: "";
+        
+                position: absolute;
+                right: 0;
+        
+                width: 24px;
+                height: 100%;
+        
+                background: linear-gradient(270deg, $repair-bg 16.84%, rgba($repair-bg, 0.0001) 100%);
+        
+                z-index: 1000;
+            }
+        }
+    }
+
+    &__pool {
+        @media screen and (max-width: $screen-md) {
+            display: flex;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            grid-gap: 16px 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 224px);
+        }
+    
+        @media screen and (min-width: $screen-lg) {
+            grid-gap: 16px 32px;
+            grid-template-columns: repeat(auto-fill, 240px);
+        }
+    }
+
+    &__uncover {
+        @media screen and (max-width: $screen-md) {
+            display: none;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        &--mg {
+            margin-right: 16px;
+        }
+
+        &--services-width {
+            @media screen and (max-width: $screen-md) {
+                max-width: 240px;
+            }
+
+            @media screen and (min-width: $screen-md) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: $screen-md),
+            screen and (max-width: $screen-lg) {
+                max-width: 224px;
+            }
+
+            @media screen and (min-width: $screen-lg) {
+                max-width: 240px;
+            }
+        }
+
+        &--price-width {
+            @media screen and (max-width: $screen-md) {
+                max-width: 260px;
+            }
+
+            @media screen and (min-width: $screen-md) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__item-card {
+        min-height: 70px;
+    
+        background-color: $repair-card-bg;
+
+        border-radius: 6px;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        transition: .3s;
+
+        &:hover {
+            transition: .3s;
+            border-color: $service-item-border;
+        }
+
+        &--flex {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

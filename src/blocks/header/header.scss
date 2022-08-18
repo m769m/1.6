@@ -1,0 +1,131 @@
+.header {
+    background: $header-bg;
+
+    width: 100%;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        &--pl-pr {
+            @media screen and (max-width: $screen-md) {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        
+            @media screen and (min-width: $screen-md) {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+
+        &--menu-pl-pr {
+            @media screen and (max-width: $screen-sm) {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            @media screen and (min-width: $screen-sm) {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &--line::after {
+            @media screen and (min-width: $screen-md) {
+                content: "";
+
+                width: 2px;
+                height: 32px;
+
+                background: $header-line-bg;
+                border-radius: 1px;
+
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__button {
+        background-color: $header-btn-bg;
+
+        margin-top: auto;
+        margin-bottom: auto;
+
+        &:not(&:last-child):not(&:only-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__logo {
+        width: 97px;
+        height: 51px;
+        background-repeat: no-repeat;
+
+        margin-right: auto;
+        
+        @media screen and (max-width: $screen-md) {
+            margin-left: 16px;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        &--before::before {
+            content: "";
+        
+            width: 2px;
+            height: 32px;
+        
+            background: $header-line-bg;
+            border-radius: 1px;
+
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 20px;
+
+            @media screen and (min-width: $screen-md) {
+                margin-left: 20px;
+            }
+        }
+
+        &--hidden {
+            @media screen and (max-width: $screen-md) {
+                display: none;
+            }
+                
+            @media screen and (min-width: $screen-md) {
+                display: flex;
+            }
+        }
+    }
+
+    &--fixed {
+        position: fixed;
+        z-index: 2;
+    }
+
+    &--none {
+        @media screen and (min-width: $screen-xl) {
+            display: none;
+        }
+    }
+
+    &--line::after {
+        display: block;
+        content: "";
+        background: $line-main-bg;
+        height: 1px;
+    }
+}

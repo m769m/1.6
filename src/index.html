@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>GPS</title>
+</head>
+
+<body class="body-site">
+    <aside class="menu modal-core" id="modal-core-menu">
+        <header class="header menu__header">
+            <div class="header__body header__body--menu-pl-pr">
+                <button class="modal-core-close menu__close header__button round-button round-button--close"></button>
+
+                <img class="header__logo">
+
+                <button class="menu__search header__button round-button round-button--search"></button>
+            </div>
+        </header>
+
+        <div class="menu__body">
+            <nav class="menu__nav">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--active"><a href="" class="menu__item-title">Ремонт техники</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Услуги и сервисы</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Корпоративным клиентам</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Продавцам техники</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Партнерам</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Производителям</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Наши сервисные центры</a></li>
+                    <li class="menu__item"><a href="" class="menu__item-title">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <footer class="menu__footer">
+                <div class="menu__row menu__row-button">
+                    <button data-modal="call" class="modal-core-open menu__button round-button round-button--burger round-button--call">
+                    </button>
+                    <button data-modal="chat" class="modal-core-open menu__button round-button round-button--chat">
+                    </button>
+                    <button class="menu__button round-button round-button--profile">
+                    </button>
+                </div>
+
+                <a class="menu__link menu__mail" href="mailto:mail@cps.com">mail@cps.com</a>
+                <a class="menu__link menu__phone" href="tel:+78008908900">8 800 890 8900</a>
+
+                <ul class="menu__row">
+                    <li class="menu__leng"><button class="menu__button-leng menu__button-leng--active">RU</button></li>
+                    <li class="menu__leng"><button class="menu__button-leng">EN</button></li>
+                    <li class="menu__leng"><button class="menu__button-leng">CH</button></li>
+                </ul>
+            </footer>
+        </div>
+    </aside>
+
+    <aside class="call modal-template modal-core" id="modal-core-call">
+        <div class="modal-template__container">
+            <div class="modal-template__body">
+                <button class="modal-template__close modal-core-close round-button round-button--close"></button>
+            
+                <header class="modal-template__header title">
+                    <h1 class="modal-template__title title__text">Заказать звонок</h1>
+                </header>
+
+                <form class="modal-template__form" action="">
+                    <input class="modal-template__data" type="tell" placeholder="Телефон">
+
+                    <p class="modal-template__info">Нажимая “отправить”, вы даете согласие на <a href="" class="modal-template__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="modal-template__link">политикой
+                    конфиденциальности</a></p>
+                    
+                    <button class="modal-template__button submit-button">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+
+    <aside class="chat modal-template modal-core" id="modal-core-chat">
+        <div class="modal-template__container">
+            <div class="modal-template__body">
+                <button class="modal-template__close modal-core-close round-button round-button--close"></button>
+            
+                <header class="modal-template__header title">
+                    <h1 class="modal-template__title title__text">Обратная связь</h1>
+                </header>
+
+                <form class="modal-template__form" action="">
+                    <input class="modal-template__data" type="text" placeholder="Имя">
+                    <input class="modal-template__data" type="tell" placeholder="Телефон">
+                    <input class="modal-template__data" type="email" placeholder="Электронная почта">
+                    <textarea class="modal-template__data modal-template__textarea" placeholder="Сообщение"></textarea>
+
+                    <p class="modal-template__info">Нажимая “отправить”, вы даете согласие на <a href="" class="modal-template__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="modal-template__link">политикой
+                    конфиденциальности</a></p>
+
+                    <button class="modal-template__button submit-button">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+
+    <header class="header header--fixed header--line header--none">
+        <div class="header__body header__body--pl-pr">
+            <div class="header__menu header__menu--line">
+                <button data-modal="menu" class="modal-core-open header__burger header__button round-button round-button--burger"></button>
+            </div>
+
+            <img class="header__logo">
+
+            <div class="header__row header__row--hidden">
+                <button data-modal="call" class="modal-core-open header__button round-button round-button--call">
+                </button>
+                <button data-modal="chat" class="modal-core-open header__button round-button round-button--chat">
+                </button>
+                <button class="header__button round-button round-button--profile">
+                </button>
+            </div>
+
+            <div class="header__row header__row--before">
+                <button class="header__button round-button round-button--repair">
+                </button>
+                <button class="header__button round-button round-button--checkstatus">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="services page__services">
+            <header class="services__header title">
+                <h1 class="services__title title__text">Услуги и сервисы</h1>
+
+                <div class="services__row">
+                    <button class="services__button">
+                        <div class="services__button-container">
+                            <p class="services__button-text">Оставить заявку</p>
+                            <div class="services__button-img round-button round-button--repair"></div>
+                        </div>   
+                    </button>
+
+                    <button class="services__button">
+                        <div class="services__button-container">
+                            <p class="services__button-text">Статус ремонта</p>
+                            <div class="services__button-img round-button round-button--checkstatus"></div>
+                        </div>
+                    </button>
+                </div>
+            </header>
+
+            <nav class="services__nav">
+                <ul class="services__list-name">
+                    <li class="services__item services__item--active"><a class="services__item-name" href="">Ремонтируемые устройства</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Дополнительные услуги</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Ремонтируемые бренды</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Цены на услуги</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Адреса сервисных центров</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Специальные цены</a></li>
+                    <li class="services__item"><a class="services__item-name" href="">Отзывы</a></li>
+                </ul>
+            </nav>
+
+            <article class="services__item-info">
+                <div class="services__item-description">
+                    <div class="services__item-content uncover-block" data-uncover-block="1">
+                        <div class="services__item-text">
+                            <p class="services__item-p">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой
+                                ноутбук Dell с официальной гарантией производителя.</p>
+                            <p class="services__item-p">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных
+                                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                            <p class="services__item-p">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                                отремонтировать свой
+                                ноутбук Dell с официальной гарантией производителя.</p>
+                            <p class="services__item-p">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                                большое количество постоянных
+                                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                            </p>
+                            <p class="services__item-p">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                                отремонтировать свой
+                                ноутбук Dell с официальной гарантией производителя.</p>
+                            <p class="services__item-p">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                                большое количество постоянных
+                                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="uncover-button uncover-button--open" data-uncover-button="1">Читать далее</button>
+                </div>
+
+                <img class="services__img">
+            </article>
+        </div>
+
+        <div class="brends repair page__brends">
+            <header class="repair__header">
+                <h2 class="repair__title">Ремонт техники различных
+                    брендов</h2>
+            </header>
+        
+            <div class="repair__body repair__body--pd">
+                <div class="repair__list uncover-block" data-uncover-block="2">
+                    <ul class="no-swiper repair__pool"></ul>
+                </div>
+                
+                <div class="swiper repair__list swiper-container" data-swiper="1">
+                    <ul class="swiper-wrapper repair__pool"></ul>
+                </div>
+        
+                <div class="swiper-pagination" data-swiper="1"></div>
+        
+                <button class="repair__uncover uncover-button uncover-button--open" data-uncover-button="2">Читать далее</button>
+        
+                <template id="repair-template">
+                    <li class="no-swiper-slide repair__item repair__item--services-width">
+                        <div class="repair__item-card repair__item-card--flex brends__item" href="">
+                            <img class="repair__item-info" alt="Логотип бренда">
+                            <button class="round-button round-button--pointer brends__button"></button>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide repair__item repair__item--services-width repair__item--mg">
+                        <div class="repair__item-card repair__item-card--flex brends__item" href="">
+                            <img class="repair__item-info" alt="Логотип бренда">
+                            <button class="round-button round-button--pointer brends__button"></button>
+                        </div>
+                    </li>
+                </template>
+            </div>
+        </div>
+
+        <div class="engineering repair page__engineering">
+            <header class="repair__header">
+                <h2 class="repair__title">Ремонт различных видов техники</h2>
+            </header>
+        
+            <div class="repair__body">
+                <div class="repair__list uncover-block" data-uncover-block="3">
+                    <ul class="no-swiper repair__pool"></ul>
+                </div>
+                
+                <div class="swiper repair__list swiper-container" data-swiper="2">
+                    <ul class="swiper-wrapper repair__pool"></ul>
+                </div>
+        
+                <div class="swiper-pagination" data-swiper="2"></div>
+        
+                <button class="repair__uncover uncover-button uncover-button--open"
+                    data-uncover-button="3">Читать далее</button>
+        
+                <template id="repair-template">
+                    <li class="no-swiper-slide repair__item repair__item--services-width">
+                        <div class="repair__item-card engineering__item" href="">
+                            <header class="engineering__header">
+                                <h3 class="repair__item-info engineering__text"></h3>
+                            </header>
+                            <button class="round-button round-button--pointer engineering__button"></button>
+                        </div>
+                    </li>
+        
+                    <li class="swiper-slide repair__item repair__item--services-width repair__item--mg ">
+                        <div class="repair__item-card engineering__item" href="">
+                            <header class="engineering__header">
+                                <h3 class="repair__item-info engineering__text"></h3>
+                            </header>
+                            <button class="round-button round-button--pointer engineering__button"></button>
+                        </div>
+                    </li>
+                </template>
+            </div>
+        </div>
+
+        <div class="price repair page__price">
+            <header class="repair__header">
+                <h2 class="repair__title">цены на услуги</h2>
+            </header>
+        
+            <div class="repair__body">
+                <table class="price__table">
+                    <thead>
+                        <tr>
+                            <th class="price__title price__cell price__cell--pt-7px">Ремонтные услуги</th>
+                            <th class="price__title price__cell price__cell--pt-7px">Цена</th>
+                            <th class="price__title price__cell price__cell--pt-7px">Срок</th>
+                            <th class="price__cell"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="no-swiper">
+
+                    </tbody>
+                </table>
+
+                <div class="swiper repair__list swiper-container" data-swiper="3">
+                    <ul class="swiper-wrapper repair__pool"></ul>
+                </div>
+                
+                <div class="swiper-pagination" data-swiper="3"></div>
+
+                <template id="repair-template">
+                    <tr class="no-swiper-slide price__group">
+                        <td class="price__text price__cell price__cell--pt-16px repair__item-info">Тестирование с выдачей технического
+                            заключения</td>
+                        <td class="price__text price__cell price__cell--pt-16px repair__item-info">Бесплатно</td>
+                        <td class="price__text price__cell price__cell--pt-16px repair__item-info">30-120 мин</td>
+                        <td class="price__text price__cell price__cell--pt-16px"><button class="price__button submit-button">Заказать</button></td>
+                    </tr>
+
+                    <li class="swiper-slide repair__item repair__item--price-width repair__item--mg ">
+                        <div class="repair__item-card price__item" href="">
+                            <div class="price__group">
+                                <p class="price__title repair__item-info"></p>
+                                <p class="price__text repair__item-info"></p>
+                            </div>
+                            
+                            <div class="price__group">
+                                <p class="price__title repair__item-info"></p>
+                                <p class="price__text repair__item-info"></p>
+                            </div>
+                            
+                            <div class="price__row">
+                                <div class="price__group">
+                                    <p class="price__title repair__item-info"></p>
+                                    <p class="price__text repair__item-info"></p>
+                                </div>
+                                
+                                <button class="price__button submit-button">Заказать</button>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+
+
+                <div class="price__info">
+                    <p class="price__info-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения
+                        коммерческого предложения на
+                        постоянное обслуживание, оставьте заявку.</p>
+
+                    <a href="" class="price__info-link">Получить коммерческое предложение</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__text footer__company">© 2019 CPS<br>Разработано командой Apesong</div>
+        <div class="footer__text"><a href="" class="footer__privacy-policy">Политика конфиденциальности</a></div>
+        <div class="footer__text footer__remark">Информация, размещенная на данной странице, не является публичной офертой</div>
+    </footer>
+
+    <div class="modal-core-fon" data-modal=""></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.modal-core {
+    display: none;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 101;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $modal-bg;
+
+    box-shadow: 0 0 0 $modal-color;
+
+    transition-duration: .5s;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-in-out;
+
+    &.modal-core--open {
+        transform: translateX(0%);
+    }
+
+    @media screen and (max-width: $screen-md) {
+        width: 100%;
+    }
+}
+
+.modal-core-fon {
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: none;
+
+    z-index: 0;
+
+    transition-duration: .5s;
+    transition-property: background-color, z-index;
+    transition-timing-function: ease-in-out;
+
+    &--open {
+        z-index: 100;
+
+        background-color: rgba($color-main, 0.96);
+    }
+}

@@ -1,0 +1,230 @@
+.price {
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+
+        @media screen and (max-width: $screen-md) {
+            display: none;
+        }
+    
+        @media screen and (min-width: $screen-md) {
+            display: block;
+        }
+    }
+
+    &__group {
+        position: relative;
+        background: $repair-card-bg;
+
+        &:not(&:last-child)::after {
+            content: "";
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @media screen and (min-width: $screen-md) {
+                width: 95%;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                width: 95.5%;
+            }
+
+            height: 1px;
+
+            @media screen and (min-width: $screen-md) {
+                margin-left: 16px;
+            }
+
+            @media screen and (min-width: $screen-lg) {
+                margin-left: 24px;
+            }
+
+            background: #EAEAEA;
+        }
+    }
+
+    &__group:first-child &__cell:first-child {
+        border-top-left-radius: 6px;
+    }
+
+    &__group:first-child &__cell:last-child {
+        border-top-right-radius: 6px;
+    }
+
+    &__group:last-child &__cell:first-child {
+        border-bottom-left-radius: 6px;
+    }
+
+    &__group:last-child &__cell:last-child {
+        border-bottom-right-radius: 6px;
+    }
+
+    &__cell {
+        box-sizing: border-box;
+
+        width: 100%;
+        text-align: left;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+        &:first-child {
+            @media screen and (min-width: $screen-md) {
+                padding-left: 16px;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                padding-left: 24px;
+            }
+        }
+
+        &:nth-child(2) {
+            @media screen and (min-width: $screen-md) {
+                padding-right: 22px;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                padding-right: 153px;
+            }
+        }
+
+        &:nth-child(3) {
+            white-space: nowrap;
+
+            @media screen and (min-width: $screen-md) {
+                padding-right: 20px;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                padding-right: 111px;
+            }
+        }
+
+        &:last-child {
+            @media screen and (min-width: $screen-md) {
+                padding-right: 16px;
+            }
+
+            @media screen and (min-width: $screen-xl) {
+                padding-right: 24px;
+            }
+        }
+
+        &--pt-16px {
+            padding-top: 16px;
+        }
+
+        &--pt-7px {
+            padding-top: 7px;
+        }
+    }
+
+    &__item {
+        box-sizing: border-box;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        height: 200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+
+        border: 1px solid $repair-bg;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__row &__text {
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875;
+        font-weight: $font-weight-s;
+
+        color: $price-color--light;
+        opacity: 0.72;
+
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875 * 1.125;
+        letter-spacing: $letter-spacing-m;
+
+        color: $price-color;
+    }
+
+    &__info {
+        max-width: 421px;
+
+        text-align: left;
+
+        @media screen and (max-width: $screen-md) {
+            margin-top: 44px;
+            padding-right: 16px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            margin-top: 24px;
+        }
+
+        @media screen and (min-width: $screen-xl) {
+            margin-top: 32px;
+        }
+    }
+
+    &__info-text {
+        font-size: $font-size--s;
+        line-height: $line-height--m / 1.5 * 1.25;
+        letter-spacing: $letter-spacing-m;
+        color: $price-color;
+
+        margin-bottom: 16px;
+    }
+
+    &__info-link {
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+        font-weight: $font-weight-m;
+        letter-spacing: $letter-spacing-s;
+        cursor: pointer;
+
+        outline: none;
+
+        color: $price-color;
+
+        transition: .3s;
+
+        &:hover {
+            transition: .3s;
+            color: $price-color--light;
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+
+            width: 24px;
+            height: 24px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url($path-pointer);
+
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

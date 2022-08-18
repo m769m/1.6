@@ -1,0 +1,33 @@
+.title {
+    display: flex;
+    
+    &::before {
+        content: "";
+
+        height: 40px;
+
+        background: $line-secondary-bg;
+
+        @media screen and (max-width: $screen-lg) {
+            width: 4px;
+
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+            width: 3px;
+
+            border-radius: 2px;
+        }
+    }
+
+    &__text {
+        font-size: $font-size--xl;
+        line-height: $line-height--xl;
+    
+        letter-spacing: $letter-spacing-xs;
+    
+        color: $service-title-color;
+    }
+}

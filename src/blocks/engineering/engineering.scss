@@ -1,0 +1,31 @@
+.engineering {
+    &__item {
+        box-sizing: border-box;
+
+        border: 1px solid $repair-card-border;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        text-align: right;
+    }
+
+    &__header {
+        text-align: left;
+    }
+
+    &__text {
+        font-size: $font-size--m;
+        line-height: $line-height--m;
+        letter-spacing: $letter-spacing-s;
+        font-weight: $font-weight-s;
+        
+        color: $price-color;
+
+        margin-bottom: 64px;
+    }
+
+    &__button {
+        background-color: $repair-header-bg;
+    }
+}

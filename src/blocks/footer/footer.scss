@@ -1,0 +1,101 @@
+.footer {
+    z-index: 1;
+    background-color: $footer-bg;
+
+    position: relative;
+
+    text-align: center;
+
+    @media screen and (max-width: $screen-xl) {
+        top: 88px;
+    }
+
+    @media screen and (max-width: $screen-md) {
+        padding-top: 40px;
+        padding-bottom: 19px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        padding-top: 47px;
+        padding-bottom: 25px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+        padding-top: 50px;
+        padding-bottom: 21px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+        left: 320px;
+        top: initial;
+
+        margin-right: 320px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__text {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875;
+
+        color: $footer-color--light;
+        opacity: 0.72;
+
+        @media screen and (min-width: $screen-md) {
+            width: calc(100% / 3);
+        } 
+
+        &:not(&:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__company {
+        @media screen and (max-width: $screen-md) {
+            text-align: center;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            text-align: left;
+        }
+
+        white-space: nowrap;
+    }
+
+    &__privacy-policy {
+        font-size: $font-size--s;
+        line-height: $line-height--s / 0.875;
+
+        color: $footer-color--light;
+
+        display: inline-block;
+        white-space: nowrap;
+
+        text-align: center;
+
+        transition: .3s;
+
+        &:hover {
+            transition: .3s;
+            color: $footer-color;
+        }
+    }
+
+    &__remark {
+        @media screen and (max-width: $screen-md) {
+            text-align: center;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            text-align: right;
+        }
+    }
+}
